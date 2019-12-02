@@ -1,30 +1,15 @@
 import React from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import ProjectList from "./containers/project/projectList"
 
 function App() {
+	const propsToSend = {
+		color: "Red",
+		projectLength: 5,
+		description: "I'm a project-list"
+	}
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img
-					src={logo}
-					className="App-logo"
-					alt="logo"
-					id="j;flskjf;dlskjf"
-					name="fjsd;flksjf;lksjf;skfjdklfj"
-				/>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+			<ProjectList {...propsToSend} />
 		</div>
 	)
 }
